@@ -4,6 +4,7 @@ import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.XboxController.Button;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
+import frc.robot.commands.ArcadeDrive;
 import frc.robot.commands.ChassisDriveCommand;
 import frc.robot.subsystems.Chassis;
 
@@ -15,7 +16,11 @@ public class RobotContainer {
 
   // 建構式
   public RobotContainer() {
+    // 按鍵對應
     configureBindings();
+
+    // 預設Command
+    mChassis.setDefaultCommand(new ArcadeDrive(mChassis, () -> mController.getLeftY(), () -> mController.getRightX()));
   }
 
   // 按鍵設定
