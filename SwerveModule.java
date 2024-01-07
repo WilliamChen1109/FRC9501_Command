@@ -23,9 +23,20 @@ public class SwerveModule {
     // 宣告絕對編碼器
     private final AnalogInput absoluteEncoder;
 
-    public SwerveModule(int driveMotorId, int turningMotorId, int absoluteEncoderId){
+    // 宣告一些變數 $
+    private final boolean absoluteEncoderReversed;
+    private final double absoluteEncoderOffsetRad;
+
+    public SwerveModule(int driveMotorId, int turningMotorId, boolean driveMotorReversed, boolean turningMotorReversed, int absoluteEncoderId, double absoluteEncoderOffset, boolean absoluteEncoderReversed){
+        // $
+        this.absoluteEncoderReversed = absoluteEncoderReversed;
+        this.absoluteEncoderOffsetRad = absoluteEncoderOffset;
+
         driveMotor = new CANSparkMax(driveMotorId, MotorType.kBrushless);
         turningMotor = new CANSparkMax(turningMotorId, MotorType.kBrushless);
+
+        driveMotor.setInverted(driveMotorReversed);
+        turningMotor.setInverted(turningMotorReversed);
 
         driveEncoder = driveMotor.getEncoder();
         turningEncoder = turningMotor.getEncoder();
