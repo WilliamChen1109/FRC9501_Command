@@ -58,7 +58,7 @@ public final class Constants {
     // 四顆輪子的DriveEncoder要不要反轉
     public static final boolean kFrontLeftDriveEncoderReversed = true;
     public static final boolean kBackLeftDriveEncoderReversed = true;
-    public static final boolean kFrontRighttDriveEncoderReversed = false;
+    public static final boolean kFrontRightDriveEncoderReversed = false;
     public static final boolean kBackRightDriveEncoderReversed = false;
 
     // 四顆輪子的AbsoluteEncoderPort
@@ -73,10 +73,10 @@ public final class Constants {
     public static final boolean kFrontRightAbsoluteEncoderReversed = false;
     public static final boolean kBackRightAbsoluteEncoderReversed = false;
 
-    // 四顆輪子AbsoluteEncoder的Offset(要自己條參數)
+    // 四顆輪子AbsoluteEncoder的Offset(要自己調參數)
     public static final double kFrontLeftAbsoluteEncoderOffsetRad = 0;
     public static final double kBackLeftAbsoluteEncoderOffsetRad = 0;
     public static final double kFrontRightAbsoluteEncoderOffsetRad = 0;
-    public static final double kBackRighttAbsoluteEncoderOffsetRad = 0;
+    public static final double kBackRightAbsoluteEncoderOffsetRad = 0;
   }
 }
