@@ -56,6 +56,22 @@ public class SwerveModule {
         resetEncoders();
     }
 
+    public double getDrivePosition(){
+        return driveEncoder.getPosition();
+    }
+
+    public double getTurningPosition(){
+        return turningEncoder.getPosition();
+    }
+
+    public double getDriveVelocity(){
+        return driveEncoder.getVelocity();
+    }
+
+    public double getTurningVelocity(){
+        return turningEncoder.getVelocity();
+    }
+
     public double getAbsoluteEncoderRad(){
         double angle = absoluteEncoder.getVoltage() / RobotController.getCurrent5V();
         angle *= 2 * Math.PI;
