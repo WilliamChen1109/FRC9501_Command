@@ -33,4 +33,8 @@ public final class Constants {
     public static final double kTurningEncoderRot2Rad = kTurningMotorGearRatio * 2 * Math.PI; // Position
     public static final double kTurningEncoderRot2RadPerSec = kTurningEncoderRot2Rad / 60; // Velocity
   }
+
+  public static class DriveConstants{
+    public static final double kPhysicalMaxSpeedMeterPerSecond = 5;
+  }
 }
