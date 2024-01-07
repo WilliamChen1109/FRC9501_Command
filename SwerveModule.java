@@ -35,6 +35,7 @@ public class SwerveModule {
         driveMotor = new CANSparkMax(driveMotorId, MotorType.kBrushless);
         turningMotor = new CANSparkMax(turningMotorId, MotorType.kBrushless);
 
+        // $
         driveMotor.setInverted(driveMotorReversed);
         turningMotor.setInverted(turningMotorReversed);
 
@@ -42,7 +43,13 @@ public class SwerveModule {
         turningEncoder = turningMotor.getEncoder();
 
         turningPidController = new PIDController(Constants.ModuleConstants.kPTurning, 0, 0);
+        turningPidController.enableContinuousInput(-Math.PI, Math.PI);
 
         absoluteEncoder = new AnalogInput(absoluteEncoderId);
+
+        driveEncoder.setPositionConversionFactor(Constants.ModuleConstants.kDriveEncoderRot2Meter);
+        driveEncoder.setVelocityConversionFactor(Constants.ModuleConstants.kDriveEncoderRot2MeterPerSec);
+        turningEncoder.setPositionConversionFactor(Constants.ModuleConstants.kTurningEncoderRot2Rad);
+        turningEncoder.setVelocityConversionFactor(Constants.ModuleConstants.kTurningEncoderRot2RadPerSec);
     }
 }
