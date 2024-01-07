@@ -21,12 +21,16 @@ public final class Constants {
 
   public static class ModuleConstants{
     // 輪子轉向的kP常數
-    public static final double kPTurning = 1;
+    public static final double kPTurning = 0.5;
 
     // 輪子單位換算
-    public static final double kDriveEncoderRot2Meter; // Position
-    public static final double kDriveEncoderRot2MeterPerSec; // Velocity
-    public static final double kTurningEncoderRot2Rad; // Position
-    public static final double kTurningEncoderRot2RadPerSec; // Velocity
+    public static final double kWheelDiameterMeters = 0.0992;
+    public static final double kDriveMotorGearRatio = 1 / 5.95;
+    public static final double kTurningMotorGearRatio = 1 / 42;
+
+    public static final double kDriveEncoderRot2Meter = kDriveMotorGearRatio * Math.PI * kWheelDiameterMeters; // Position
+    public static final double kDriveEncoderRot2MeterPerSec = kDriveEncoderRot2Meter / 60; // Velocity
+    public static final double kTurningEncoderRot2Rad = kTurningMotorGearRatio * 2 * Math.PI; // Position
+    public static final double kTurningEncoderRot2RadPerSec = kTurningEncoderRot2Rad / 60; // Velocity
   }
 }
