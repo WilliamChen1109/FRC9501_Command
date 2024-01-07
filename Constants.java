@@ -36,5 +36,47 @@ public final class Constants {
 
   public static class DriveConstants{
     public static final double kPhysicalMaxSpeedMeterPerSecond = 5;
+
+    // 四顆輪子的DriveMotorID
+    public static final int kFrontLeftDriveMotorPort = 8;
+    public static final int kBackLeftDriveMotorPort = 2;
+    public static final int kFrontRightDriveMotorPort = 6;
+    public static final int kBackRightDriveMotorPort = 4;
+
+    // 四顆輪子的TurningMotorID
+    public static final int kFrontLeftTurningMotorPort = 7;
+    public static final int kBackLeftTurningMotorPort = 1;
+    public static final int kFrontRightTurningMotorPort = 5;
+    public static final int kBackRightTurningMotorPort = 3;
+
+    // 四個輪子的TurningEncoder要不要反轉
+    public static final boolean kFrontLeftTurningEncoderReversed = true;
+    public static final boolean kBackLeftTurningEncoderReversed = true;
+    public static final boolean kFrontRightTurningEncoderReversed = true;
+    public static final boolean kBackRightTurningEncoderReversed = true;
+
+    // 四顆輪子的DriveEncoder要不要反轉
+    public static final boolean kFrontLeftDriveEncoderReversed = true;
+    public static final boolean kBackLeftDriveEncoderReversed = true;
+    public static final boolean kFrontRighttDriveEncoderReversed = false;
+    public static final boolean kBackRightDriveEncoderReversed = false;
+
+    // 四顆輪子的AbsoluteEncoderPort
+    public static final int kFrontLeftDriveAbsoluteEncoderPort = 0;
+    public static final int kBackLeftDriveAbsoluteEncoderPort = 1;
+    public static final int kFrontRightDriveAbsoluteEncoderPort = 2;
+    public static final int kBackRightDriveAbsoluteEncoderPort = 3;
+
+    // 四顆輪子的Encoder要不要反轉
+    public static final boolean kFrontLeftAbsoluteEncoderReversed = false;
+    public static final boolean kBackLeftAbsoluteEncoderReversed = false;
+    public static final boolean kFrontRightAbsoluteEncoderReversed = false;
+    public static final boolean kBackRightAbsoluteEncoderReversed = false;
+
+    // 四顆輪子AbsoluteEncoder的Offset(要自己條參數)
+    public static final double kFrontLeftAbsoluteEncoderOffsetRad = 0;
+    public static final double kBackLeftAbsoluteEncoderOffsetRad = 0;
+    public static final double kFrontRightAbsoluteEncoderOffsetRad = 0;
+    public static final double kBackRighttAbsoluteEncoderOffsetRad = 0;
   }
 }
