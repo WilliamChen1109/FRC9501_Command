@@ -13,4 +13,13 @@ public final class Constants {
 
     public static final double kDrivingSpeed = 0.6;
   }
+
+  public static class ElevatorConstants{
+    public static final int kElevatorLeftMotorID = 4;
+    public static final int kElevatorRightMotorID = 5;
+  }
+
+  public static class ModuleConstants{
+    public static final double kPTurning = 1;
+  }
 }
