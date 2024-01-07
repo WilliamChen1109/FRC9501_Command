@@ -20,6 +20,13 @@ public final class Constants {
   }
 
   public static class ModuleConstants{
+    // 輪子轉向的kP常數
     public static final double kPTurning = 1;
+
+    // 輪子單位換算
+    public static final double kDriveEncoderRot2Meter; // Position
+    public static final double kDriveEncoderRot2MeterPerSec; // Velocity
+    public static final double kTurningEncoderRot2Rad; // Position
+    public static final double kTurningEncoderRot2RadPerSec; // Velocity
   }
 }
